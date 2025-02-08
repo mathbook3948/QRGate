@@ -1,0 +1,8 @@
+# .env 제외
+app/.env
+
+# sqlite 제외
+app/assets/main.sqlite
+
+# .idea
+.idea
