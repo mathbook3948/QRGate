@@ -1,5 +1,4 @@
-from datetime import datetime
-
+import bcrypt
 from sqlalchemy import create_engine, Column, Integer, DateTime, TEXT, NUMERIC, ForeignKey
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 
@@ -19,7 +18,8 @@ def create_table():
     Base.metadata.create_all(engine)
 
 def insert_user(user_id, user_pwd):
-    user = User(user_id=user_id, user_pwd=user_pwd)
+    hashed_pwd = bcrypt.hashpw(user_pwd.encode(), bcrypt.gensalt()).decode()
+    user = User(user_id=user_id, user_pwd=hashed_pwd)
     session.add(user)
     session.commit()
 
