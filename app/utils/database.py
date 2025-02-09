@@ -2,7 +2,7 @@ import bcrypt
 from sqlalchemy import create_engine, Column, Integer, DateTime, TEXT, NUMERIC, ForeignKey
 from sqlalchemy.orm import sessionmaker, declarative_base, relationship
 
-engine = create_engine("sqlite:///./assets/main.sqlite", echo=True) # 실제로는 이 부분을 database.sqlite로
+engine = create_engine("sqlite:///./app/assets/main.sqlite", echo=True) # 실제로는 이 부분을 database.sqlite로
 
 Base = declarative_base()
 Session = sessionmaker(bind=engine)

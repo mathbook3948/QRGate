@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from utils import create_table
-from routes import routes as router
+from app.utils.database import create_table
+from app.routes import routes as router
 from fastapi.middleware.cors import CORSMiddleware
 import datetime
 

@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from utils import insert_user
+from ..utils import insert_user
 
 routes = APIRouter(prefix="/test", tags=["test"])
 
