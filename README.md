@@ -28,6 +28,8 @@
    - 인증이 완료되면, 키오스크는 사용자가 서비스를 이용할 수 있도록 관련 기능을 제공합니다.
 
 이러한 절차를 통해 QRGate는 현장에서 스마트폰 로그인을 이용한 안전하고 간편한 인증을 제공합니다.
+### SEQUENCE DIAGRAM
+<img width="828" alt="스크린샷 2025-02-12 오전 10 14 57" src="https://github.com/user-attachments/assets/7ac77fac-af8b-4cf7-99f7-832efd5b4347" />
 
 ## API 목록
 1. /api/qr/start
