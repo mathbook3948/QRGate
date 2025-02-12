@@ -81,6 +81,7 @@ success
 ## 설치
 ### 요구 사항
 - **Python**: 3.10 (테스트 완료)
+- **Redis**가 필요합니다
 - **필수 라이브러리**:
   - FastAPI
   - uvicorn
@@ -99,7 +100,7 @@ pip install -r requirements.txt
 
 ## 테스트 실행
 ```shell
-docker compose up -d
+uvicorn app.main:app --host 0.0.0.0 --reload
 ```
 
 ## 문의
